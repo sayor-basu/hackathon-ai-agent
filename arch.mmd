@@ -1,0 +1,31 @@
+flowchart LR
+    subgraph "Slack"
+        A["Slack Channel<br>(User logs a request)"]
+        B["Slack Bot/Listener"]
+    end
+    A --> B
+    B --> |"New Request"| C[("AI Orchestration<br>Microservice")]
+
+    subgraph "AI Orchestration / RAG"
+        C --> L["LLM"]
+        C --> V["Vector DB"]
+        V --> D[("Embedded Knowledge Sources")]
+    end
+
+    C --> |"If insufficient data"| B
+    C --> |"Assign/Update Ticket"| E["Jira API"]
+    E --> F[("Jira")]
+    F --> G["Assigned Team Engineer"]
+
+    %% Future Feedback Loop
+    subgraph "Future Feedback Loop"
+        X["User/Engineer Feedback<br>(Corrections, New Info)"]
+        X --> Y["Feedback Store/Tracker"]
+        Y --> Z["Retraining / Knowledge-Base Update"]
+        Z --> L
+        Z --> V
+    end
+
+    %% Example flow of feedback:
+    G -- "Feedback on solution" --> X
+    B -- "User clarifications" --> X

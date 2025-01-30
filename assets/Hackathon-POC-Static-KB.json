@@ -1,0 +1,276 @@
+[
+    {
+        "id": "ticket-1",
+        "text": "Ticket #1: Category=API Access. Customer wants both stage and production access but only provided stage client ID. No environment details beyond that. Assigned to TeamAlpha. Comments indicate TeamAlpha asked user for production client ID, which was later provided. Ticket resolved by granting credentials for both environments. No reassign needed.",
+        "metadata":
+        {
+            "category": "API Access",
+            "initialAssignedTeam": "TeamAlpha",
+            "finalAssignedTeam": "TeamAlpha",
+            "questionsAsked":
+            [
+                "Could you provide the production client ID?"
+            ],
+            "resolutionSteps":
+            [
+                "User provided production client ID",
+                "Verified user identity",
+                "Granted stage & production access"
+            ]
+        }
+    },
+    {
+        "id": "ticket-2",
+        "text": "Ticket #2: Category=Issue/Problem. User reports an intermittent server error but did not specify if it was in dev, stage, or prod environment. Initially assigned to TeamBeta. Reassigned to TeamGamma when TeamBeta discovered it was a network config issue. TeamGamma asked user for environment details and steps to reproduce. Ticket resolved after user clarified environment was stage only.",
+        "metadata":
+        {
+            "category": "Issue/Problem",
+            "initialAssignedTeam": "TeamBeta",
+            "finalAssignedTeam": "TeamGamma",
+            "questionsAsked":
+            [
+                "Which environment is affected?",
+                "Can you provide steps to reproduce the error?"
+            ],
+            "resolutionSteps":
+            [
+                "User provided environment info (stage)",
+                "TeamGamma updated network config",
+                "Error resolved"
+            ]
+        }
+    },
+    {
+        "id": "ticket-3",
+        "text": "Ticket #3: Category=Request. User asks for a custom report on user activity. Provided all needed details in the initial request (date range, user segments). Assigned to TeamBeta. No missing info. Request completed successfully.",
+        "metadata":
+        {
+            "category": "Request",
+            "initialAssignedTeam": "TeamBeta",
+            "finalAssignedTeam": "TeamBeta",
+            "questionsAsked":
+            [],
+            "resolutionSteps":
+            [
+                "Created custom SQL query",
+                "Generated report for specified date range",
+                "Delivered report to user"
+            ]
+        }
+    },
+    {
+        "id": "ticket-4",
+        "text": "Ticket #4: Category=Other. User is unsure which team handles billing questions. Provided no further details. Assigned to TeamAlpha by default. Reassigned to TeamBeta after triage. TeamBeta discovered no direct involvement and forwarded to Finance (external team). Marked as closed in Jira with note: 'Handled externally.'",
+        "metadata":
+        {
+            "category": "Other",
+            "initialAssignedTeam": "TeamAlpha",
+            "finalAssignedTeam": "TeamBeta",
+            "questionsAsked":
+            [
+                "Can you clarify if this is related to subscription billing?"
+            ],
+            "resolutionSteps":
+            [
+                "User indicated it was a billing issue",
+                "TeamBeta forwarded to external Finance team",
+                "Ticket closed"
+            ]
+        }
+    },
+    {
+        "id": "ticket-5",
+        "text": "Ticket #5: Category=Issue/Problem. System outage reported in production. User provided steps to reproduce (log in → error 502). Assigned to TeamGamma. Comments show that user was also asked if stage environment had the same issue, but user didn't respond. Resolved by restarting prod cluster.",
+        "metadata":
+        {
+            "category": "Issue/Problem",
+            "initialAssignedTeam": "TeamGamma",
+            "finalAssignedTeam": "TeamGamma",
+            "questionsAsked":
+            [
+                "Is this also happening in the stage environment?"
+            ],
+            "resolutionSteps":
+            [
+                "Replicated error in production",
+                "Restarted prod cluster",
+                "Verified service restored"
+            ]
+        }
+    },
+    {
+        "id": "ticket-6",
+        "text": "Ticket #6: Category=API Access. User requests a new client ID for production but forgets to include the stage client ID. Initially assigned to TeamAlpha. Comments: TeamAlpha requested the stage client ID to confirm existing setup. Ticket resolved once user provided it.",
+        "metadata":
+        {
+            "category": "API Access",
+            "initialAssignedTeam": "TeamAlpha",
+            "finalAssignedTeam": "TeamAlpha",
+            "questionsAsked":
+            [
+                "Could you share your existing stage client ID?"
+            ],
+            "resolutionSteps":
+            [
+                "Validated user’s stage client ID",
+                "Issued new production client ID"
+            ]
+        }
+    },
+    {
+        "id": "ticket-7",
+        "text": "Ticket #7: Category=Request. User wants a feature enhancement for the admin dashboard. Provided partial details but missing acceptance criteria. Assigned to TeamBeta. TeamBeta asked for acceptance criteria. User responded with examples. Implementation planned but not completed under this ticket.",
+        "metadata":
+        {
+            "category": "Request",
+            "initialAssignedTeam": "TeamBeta",
+            "finalAssignedTeam": "TeamBeta",
+            "questionsAsked":
+            [
+                "Could you specify acceptance criteria?"
+            ],
+            "resolutionSteps":
+            [
+                "Discussed examples with user",
+                "Created a separate backlog item for implementation"
+            ]
+        }
+    },
+    {
+        "id": "ticket-8",
+        "text": "Ticket #8: Category=Issue/Problem. User experiences data corruption error in the dev environment. Provided logs but forgot to mention steps to reproduce. Assigned to TeamGamma. TeamGamma asked for exact actions leading to data corruption. User later clarified they were running a custom script. Issue partially resolved by reversing the script changes. No reassign needed.",
+        "metadata":
+        {
+            "category": "Issue/Problem",
+            "initialAssignedTeam": "TeamGamma",
+            "finalAssignedTeam": "TeamGamma",
+            "questionsAsked":
+            [
+                "Which specific actions or scripts led to the corruption?"
+            ],
+            "resolutionSteps":
+            [
+                "User provided custom script details",
+                "TeamGamma identified problematic queries",
+                "Reversed script changes to restore data"
+            ]
+        }
+    },
+    {
+        "id": "ticket-9",
+        "text": "Ticket #9: Category=API Access. User changed their application name and lost production access. Did not mention stage environment at all. Assigned to TeamAlpha. TeamAlpha asked if the stage environment needed new credentials, but user never responded. Resolved production access by generating a new client ID.",
+        "metadata":
+        {
+            "category": "API Access",
+            "initialAssignedTeam": "TeamAlpha",
+            "finalAssignedTeam": "TeamAlpha",
+            "questionsAsked":
+            [
+                "Do you require updated credentials for the stage environment as well?"
+            ],
+            "resolutionSteps":
+            [
+                "Issued new production client ID",
+                "Noted user did not respond regarding stage"
+            ]
+        }
+    },
+    {
+        "id": "ticket-10",
+        "text": "Ticket #10: Category=Issue/Problem. User reports a 403 forbidden error when calling the API but provides no steps to reproduce or environment details. Assigned to TeamGamma, which requested more info. User then mentioned it’s happening on both dev and prod. TeamGamma partially resolved dev but reassigns to TeamBeta for the prod environment config. Final resolution unknown; ticket remains open.",
+        "metadata":
+        {
+            "category": "Issue/Problem",
+            "initialAssignedTeam": "TeamGamma",
+            "finalAssignedTeam": "TeamBeta",
+            "questionsAsked":
+            [
+                "Which environment(s) are affected?",
+                "Can you share any logs or error codes?"
+            ],
+            "resolutionSteps":
+            [
+                "Updated dev environment permissions",
+                "Transferred to TeamBeta for prod config"
+            ]
+        }
+    },
+    {
+        "id": "ticket-11",
+        "text": "Ticket #11: Category=Other. Internal question about setting up a new environment for a future release. User is from the DevOps team, uncertain which team manages environment provisioning. Initially assigned to TeamAlpha, who reassigns it to TeamGamma. TeamGamma clarifies environment creation is done by an external Ops group. Ticket closed as informational.",
+        "metadata":
+        {
+            "category": "Other",
+            "initialAssignedTeam": "TeamAlpha",
+            "finalAssignedTeam": "TeamGamma",
+            "questionsAsked":
+            [
+                "Is this environment purely for test or for production?"
+            ],
+            "resolutionSteps":
+            [
+                "Determined environment creation is out of scope",
+                "Informed user about external Ops group contact"
+            ]
+        }
+    },
+    {
+        "id": "ticket-12",
+        "text": "Ticket #12: Category=Request. User requests a minor UI tweak and short-term workaround for the admin panel. Provided partial acceptance criteria but no details on the final user flow. Assigned to TeamBeta. TeamBeta clarifies user flow requirements. After some discussion, user decides to postpone changes. Ticket marked as deferred.",
+        "metadata":
+        {
+            "category": "Request",
+            "initialAssignedTeam": "TeamBeta",
+            "finalAssignedTeam": "TeamBeta",
+            "questionsAsked":
+            [
+                "Could you outline the exact user flow for the requested changes?"
+            ],
+            "resolutionSteps":
+            [
+                "Gathered partial acceptance criteria",
+                "User postponed the UI tweak for a future sprint"
+            ]
+        }
+    },
+    {
+        "id": "ticket-13",
+        "text": "Ticket #13: Category=Issue/Problem. User sees random data loss in production after a hotfix. Assigned to TeamAlpha, who identifies that logs point to an application-level bug. Reassigns to TeamGamma for deeper investigation. TeamGamma finds a database script error. Once corrected, data stops disappearing.",
+        "metadata":
+        {
+            "category": "Issue/Problem",
+            "initialAssignedTeam": "TeamAlpha",
+            "finalAssignedTeam": "TeamGamma",
+            "questionsAsked":
+            [
+                "When did the data loss start?",
+                "Can you share the hotfix deployment timeline?"
+            ],
+            "resolutionSteps":
+            [
+                "Confirmed issue in application logs",
+                "Traced bug to a faulty DB script",
+                "Fixed script, verified data consistency"
+            ]
+        }
+    },
+    {
+        "id": "ticket-14",
+        "text": "Ticket #14: Category=API Access. User mentions they need multiple sets of credentials for a new microservice architecture, but fails to mention which environments. Assigned to TeamAlpha. TeamAlpha requests environment details. User clarifies they need dev, stage, and prod keys. All keys issued, but user forgets to test dev. Later returns with a new request to fix dev environment which is out of scope of this ticket.",
+        "metadata":
+        {
+            "category": "API Access",
+            "initialAssignedTeam": "TeamAlpha",
+            "finalAssignedTeam": "TeamAlpha",
+            "questionsAsked":
+            [
+                "Which specific environments (dev, stage, prod) require credentials?"
+            ],
+            "resolutionSteps":
+            [
+                "Generated three separate API keys",
+                "Noted user did not test dev environment within this ticket"
+            ]
+        }
+    }
+]
